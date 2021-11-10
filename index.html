@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="utf-8">
+ <title> Simple Calculator </title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="shortcut icon" href="img/logo.png">
+ 
+</head>
+<body>
+
+<div class="img">
+    <p id="demo" onclick="myFunction()"><img src="img/logo.png" alt="calculator logo" width="50px" height="50px"></p>
+</div> 
+<div id="top">
+<table class = "calculator" id="cal">
+    <tr style="height:0.5px;">
+        <td colspan="4">
+          <ul>
+             <li><button class="red" onclick="FunctionClose()">x</button></li>
+             <li><button class="yellow" onclick="Mini()">-</button></li>
+             <li><button class="green" onclick="Maxmin()">+</button></li>
+         </ul>
+       </td>
+    </tr>
+
+ <tr>
+ <td colspan = "4"> <input class = "display-box" type = "text" id = "result" disabled /> </td>
+ <!-- clearScreen() function clear all the values -->
+ </tr>
+ <tr>
+ <!-- display() function display the value of clicked button -->
+ <td> <input class = "button" type = "button" value = "AC" onclick = "clearScreen()" /> </td>
+ <td> <input class = "button" type = "button" value = "+/-" onclick = "inverse()" /> </td>
+ <td> <input class = "button" type = "button" value = "%" onclick = "display('%')" /> </td>
+ <td> <input class = "button-l" type = "button" value = "/" onclick = "display('/')" /> </td>
+ </tr>
+ <tr>
+ <td> <input class = "button" type = "button" value = "1" onclick = "display('1')" /> </td>
+ <td> <input class = "button" type = "button" value = "2" onclick = "display('2')" /> </td>
+ <td> <input class = "button" type = "button" value = "3" onclick = "display('3')" /> </td>
+ <td> <input class = "button-l" type = "button" value = "*" onclick = "display('*')" /> </td>
+ </tr>
+ <tr>
+ <td> <input class = "button" type = "button" value = "4" onclick = "display('4')" /> </td>
+ <td> <input class = "button" type = "button" value = "5" onclick = "display('5')" /> </td>
+ <td> <input class = "button" type = "button" value = "6" onclick = "display('6')" /> </td>
+ <td> <input class = "button-l" type = "button" value = "-" onclick = "display('-')" /> </td>
+ </tr>
+ <tr>
+    <td> <input class = "button" type = "button" value = "7" onclick = "display('7')" /> </td>
+    <td> <input class = "button" type = "button" value = "8" onclick = "display('8')" /> </td>
+    <td> <input class = "button" type = "button" value = "9" onclick = "display('9')" /> </td>
+    <td> <input class = "button-l" type = "button" value = "+" onclick = "display('+')" /> </td>
+    </tr>
+ <tr>
+ <td colspan="2"> <input class = "buttondown" type = "button" value = "0" onclick = "display('0')" /> </td>
+ <td> <input class = "button" type = "button" value = "." onclick = "display('.')"  /> </td>
+  <!-- calculate() function evaluate the mathematical expression -->
+ <td> <input class = "button-ldown"  type = "button" value = "=" onclick = "calculate()" /> </td>
+ </tr>
+ 
+ </table>
+
+</div>
+
+<div class="bg"></div>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
